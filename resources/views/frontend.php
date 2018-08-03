@@ -49,7 +49,9 @@ return [
 			],
 		],
 		'core' => [
-			'sections' => [],
+			'sections' => [
+				'buttons' => null,
+			],
 		],
 		'blocks' => [
 			'sections' => [],
