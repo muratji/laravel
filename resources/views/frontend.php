@@ -15,7 +15,7 @@ return [
 		'foundation' => [
 			'sections' => [
 				'colours' => [
-					'data' => [
+					'model' => [
 						'featured' => [
 							'Primary' => [
 								'colour' => 'Yellow',
@@ -54,7 +54,12 @@ return [
 			],
 		],
 		'blocks' => [
-			'sections' => [],
+			'sections' => [
+				// 'foo' => null,
+				// 'bar' => [
+				// 	'model' => null,
+				// ],
+			],
 		],
 	],
 ];

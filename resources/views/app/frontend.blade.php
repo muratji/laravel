@@ -22,7 +22,7 @@
 			@foreach ($section['sections'] as $subSlug => $subSection)
 				<h3 class="h3">{{ $subSection['heading'] ?? title_case($subSlug) }}</h3>
 
-				@include(implode('.', ['styleguide', $slug, $subSlug]), $subSection['data'] ?? [])
+				@include(implode('.', ['styleguide', $slug, $subSlug]), $subSection['model'] ?? [])
 			@endforeach
 		@endforeach
 
