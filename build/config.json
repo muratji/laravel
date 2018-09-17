@@ -18,7 +18,7 @@
       "proxy": "web:80",
       "snippetOptions": {
         "rule": {
-          "match": "</body>"
+          "match": "<body>"
         }
       },
       "ui": false
