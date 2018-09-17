@@ -1,6 +1,6 @@
 <div class="push-top--large row flush-first--2">
 	<div class="column width--10">
-		<h3 class="h3">{{ $title }}</h3>
+		<h3 class="h5">{{ $title }}</h3>
 
 		@if ($meta ?? false)
 			<dl class="push-top">

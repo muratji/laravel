@@ -76,5 +76,49 @@
 				],
 			],
 		],
+		'Buttons - Vue' => [
+			'partial' => 'vue',
+			'model' => [
+				'buttons' => [
+					'Primary' => [
+						'cta' => 'Laboris tempor laboris',
+					],
+					'Secondary' => [
+						'cta' => 'Laboris tempor laboris',
+						'type' => 'secondary',
+					],
+					'Positive' => [
+						'cta' => 'Laboris tempor laboris',
+						'type' => 'positive',
+					],
+					'Negative' => [
+						'cta' => 'Laboris tempor laboris',
+						'type' => 'negative',
+					],
+				],
+			],
+		],
+		'Buttons - Blade' => [
+			'partial' => 'blade',
+			'model' => [
+				'buttons' => [
+					'Primary' => [
+						'cta' => 'Laboris tempor laboris',
+					],
+					'Secondary' => [
+						'cta' => 'Laboris tempor laboris',
+						'type' => 'secondary',
+					],
+					'Positive' => [
+						'cta' => 'Laboris tempor laboris',
+						'type' => 'positive',
+					],
+					'Negative' => [
+						'cta' => 'Laboris tempor laboris',
+						'type' => 'negative',
+					],
+				],
+			],
+		],
 	],
 ])
