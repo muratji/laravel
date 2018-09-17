@@ -5,34 +5,29 @@
 			'model' => [
 				'families' => [
 					'Helvetica' => [
+						'stack' => 'Helvetica, sans-serif',
 						'styles' => [
-							'Light 300',
-							'Regular 500',
-							'Bold 700'
+							'Bold 700',
 						],
 						'source' => [
-							'name' => 'fonts.com',
+							'copy' => 'fonts.com',
 							'url' => '#0',
 						],
 					],
 					'Georgia' => [
+						'stack' => 'Georgia, serif',
 						'styles' => [
-							'Regular 500',
-							'Bold 700'
+							'Regular 400',
+							'Bold 700',
 						],
-						'source' => [
-							'name' => 'Google Fonts',
-							'url' => '#0',
-						],
+						'source' => 'System',
 					],
-					'Damion' => [
+					'Bradley Hand' => [
+						'stack' => 'Bradley Hand',
 						'styles' => [
-							'Regular 500',
+							'Regular 400',
 						],
-						'source' => [
-							'name' => 'fonts.com',
-							'url' => '#0',
-						],
+						'source' => 'System',
 					],
 				],
 			],
@@ -50,7 +45,6 @@
 						'variants' => [
 							'Dark' => '#ecc804',
 							'Light' => '#fff899',
-							'X-Light' => '#fffccc',
 						],
 					],
 					'Secondary' => [
@@ -62,11 +56,8 @@
 						],
 					],
 					'Accent' => [
-						'hex' => '#5e5e5e',
+						'hex' => '#68cbca',
 						'variants' => [
-							'Dark' => '#363636',
-							'Light' => '#afafaf',
-							'X-Light' => '#d7d7d7',
 						],
 					],
 				],
