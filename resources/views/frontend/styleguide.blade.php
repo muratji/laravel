@@ -2,7 +2,40 @@
 	'model' => [
 		'Font families' => [
 			'partial' => 'fonts',
-			'model' => null,
+			'model' => [
+				'families' => [
+					'Helvetica' => [
+						'styles' => [
+							'Light 300',
+							'Regular 500',
+							'Bold 700'
+						],
+						'source' => [
+							'name' => 'fonts.com',
+							'url' => '#0',
+						],
+					],
+					'Georgia' => [
+						'styles' => [
+							'Regular 500',
+							'Bold 700'
+						],
+						'source' => [
+							'name' => 'Google Fonts',
+							'url' => '#0',
+						],
+					],
+					'Damion' => [
+						'styles' => [
+							'Regular 500',
+						],
+						'source' => [
+							'name' => 'fonts.com',
+							'url' => '#0',
+						],
+					],
+				],
+			],
 		],
 		'Typography' => [
 			'partial' => 'typography',
