@@ -1,7 +1,7 @@
 @foreach ($featured as $name => $colour)
 	@component('styleguide.component', [
 		'title' => $name,
-		'meta' => $colour['variants'],
+		'meta' => array_prepend($colour['variants'], $colour['hex'], 'Base'),
 	])
 		<div class="row flush-first--2">
 			<div class="column width--12">
@@ -33,7 +33,7 @@
 
 @component('styleguide.component', [
 	'title' => 'Additional',
-	'meta' => $additional,
+
 ])
 	<div class="row flush-first--6">
 		@foreach ($additional as $name => $hex)

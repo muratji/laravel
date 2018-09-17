@@ -34,7 +34,12 @@
 		],
 		'Typography' => [
 			'partial' => 'typography',
-			'model' => null,
+			'model' => [
+				'headings' => [
+					'Heading 1' => 'h1',
+					'Heading 2' => 'h2',
+				],
+			],
 		],
 		'Colour palette' => [
 			'partial' => 'colours',
