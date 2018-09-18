@@ -1,0 +1,98 @@
+@import 'variables';
+@import 'utility/mixins';
+@import 'core/typography';
+
+// $spacing-unit--small: rem(15px);
+// $spacing-unit: rem(20px);
+// $spacing-unit--medium: rem(30px);
+// $spacing-unit--large: rem(40px);
+
+$c--border: $c--grey-light;
+
+.s {
+	// spacing
+
+	@mixin macro($spacing-unit, $spacing-unit--tablet, $modifier: '') {
+		&-push-top#{$modifier} {
+			margin-top: $spacing-unit;
+		}
+
+		&-soft-ends#{$modifier} {
+			@include soft--ends($spacing-unit);
+		}
+
+		@include mq(tablet) {
+			&-push-top#{$modifier} {
+				margin-top: $spacing-unit--tablet;
+			}
+
+			&-soft-ends#{$modifier} {
+				@include soft--ends($spacing-unit--tablet);
+			}
+		}
+	}
+	@include macro($spacing-unit--small, $spacing-unit);
+	@include macro($spacing-unit--medium, $spacing-unit--large, --large);
+
+	// headings
+
+	&-h1 {
+		@extend .h1;
+	}
+
+	&-h2 {
+		@extend .h2;
+		position: relative;
+
+		&__anchor {
+			display: inline-block;
+			width: 1em;
+			margin-left: -1em;
+			text-align: right;
+			opacity: 0;
+		}
+
+		&:hover &__anchor {
+			opacity: 1;
+		}
+	}
+
+	&-h3 {
+		@extend .h3;
+	}
+
+	// grid
+
+	&-grid {
+		$spacing-unit--gutter: $spacing-unit;
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: n($spacing-unit--gutter);
+
+		&__item {
+			flex: none;
+			width: 100%;
+			padding-left: $spacing-unit--gutter;
+		}
+	}
+
+	// component
+
+	&-component {
+		$ratio--preview: 14/24;
+
+		&__meta {
+			width: (1 - $ratio--preview) * 100%;
+		}
+
+		&__preview {
+			width: $ratio--preview * 100%;
+		}
+	}
+
+	// others
+
+	&-hr {
+		background-color: $c--border;
+	}
+}

@@ -1,9 +1,9 @@
-<div class="push-top--large row flush-first--2">
-	<div class="column width--10">
-		<h3 class="h5">{{ $title }}</h3>
+<div class="s-push-top--large s-grid s-component">
+	<div class="s-grid__item s-component__meta">
+		<h3 class="s-h3">{{ $title }}</h3>
 
 		@if ($meta ?? false)
-			<dl class="push-top">
+			<dl class="s-push-top">
 				@foreach ($meta as $key => $value)
 					<dt>{{ $key }}</dt>
 					<dd>
@@ -26,7 +26,7 @@
 		@endif
 	</div>
 
-	<div class="column width--14">
+	<div class="s-grid__item s-component__preview">
 		{{ $slot }}
 	</div>
 </div>

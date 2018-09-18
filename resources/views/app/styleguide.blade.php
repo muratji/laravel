@@ -7,14 +7,14 @@
 @endsection
 
 @section('content')
-	<div class="container">
-		<h1 class="h1">Styleguide</h1>
+	<div class="s-soft-ends--large container">
+		<h1 class="s-h1">Styleguide</h1>
 
 		@foreach ($model as $heading => $section)
-			<hr class="push-top--large">
+			<hr class="s-push-top--large s-hr">
 
-			<section class="push-top--large" id="{{ str_slug($heading) }}">
-				<h2 class="h2"><a href="#{{ str_slug($heading) }}">#</a> {{ $heading }}</h2>
+			<section class="s-push-top--large" id="{{ str_slug($heading) }}">
+				<h2 class="s-h2"><span class="s-h2__anchor"><a href="#{{ str_slug($heading) }}">#</a>&nbsp;</span>{{ $heading }}</h2>
 
 				@includeIf('styleguide.' . $section['partial'], $section['model'])
 			</section>
