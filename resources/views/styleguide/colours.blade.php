@@ -1,22 +1,24 @@
 @foreach ($featured as $name => $colour)
 	@component('styleguide.component', ['title' => $name])
-		<div class="row flush-first--2">
-			<div class="column width--12">
-				<div class="placeholder placeholder--square">
-					<div style="background-color: {{ $colour['hex'] }}">
-						<p>Base</p>
+		<div class="s-grid">
+			<div class="s-grid__item s-colours__base">
+				<div class="s-colour" style="background-color: {{ $colour['hex'] }}">
+					<div class="s-colour__inner">
+						<span>Base</span>
+
 						<code>{{ $colour['hex'] }}</code>
 					</div>
 				</div>
 			</div>
 
-			<div class="column width--12">
-				<div class="row flush-first--3">
+			<div class="s-grid__item s-colours__variants">
+				<div class="s-grid">
 					@foreach ($colour['variants'] as $name => $hex)
-						<div class="column width--8">
-							<div class="placeholder placeholder--square">
-								<div style="background-color: {{ $hex }}">
-									{{ $name }}
+						<div class="s-grid__item s-colour-wrapper--secondary">
+							<div class="s-colour" style="background-color: {{ $hex }}">
+								<div class="s-colour__inner">
+									<span>{{ $name }}</span>
+
 									<code>{{ $hex }}</code>
 								</div>
 							</div>
@@ -29,12 +31,13 @@
 @endforeach
 
 @component('styleguide.component', ['title' => 'Additional'])
-	<div class="row flush-first--6">
+	<div class="s-grid">
 		@foreach ($additional as $name => $hex)
-			<div class="column width--4">
-				<div class="placeholder placeholder--square">
-					<div style="background-color: {{ $hex }}">
-						{{ $name }}
+			<div class="s-grid__item s-colour-wrapper--tertiary">
+				<div class="s-colour" style="background-color: {{ $hex }}">
+					<div class="s-colour__inner">
+						<span>{{ $name }}</span>
+
 						<code>{{ $hex }}</code>
 					</div>
 				</div>

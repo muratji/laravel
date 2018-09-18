@@ -1,4 +1,7 @@
 @extends('app/styleguide', [
+	'page' => [
+		'title' => 'Styleguide',
+	],
 	'model' => [
 		'Font families' => [
 			'partial' => 'fonts',

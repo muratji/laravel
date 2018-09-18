@@ -2,12 +2,15 @@
 @import 'utility/mixins';
 @import 'core/typography';
 
+// variables
+
+// $spacing-unit--x-small: rem(10px);
 // $spacing-unit--small: rem(15px);
 // $spacing-unit: rem(20px);
 // $spacing-unit--medium: rem(30px);
 // $spacing-unit--large: rem(40px);
 
-$rel-spacing-unit: .5em;
+// $rel-spacing-unit--small: .5em;
 
 $c--subtle: $c--grey-light;
 
@@ -83,7 +86,7 @@ $breakpoint--styleguide: tablet;
 			> dt,
 			> dd {
 				float: left;
-				margin-top: $rel-spacing-unit;
+				margin-top: $rel-spacing-unit--small;
 			}
 
 			> dt {
@@ -100,7 +103,7 @@ $breakpoint--styleguide: tablet;
 
 			> dd {
 				width: auto;
-				padding-left: $rel-spacing-unit;
+				padding-left: $rel-spacing-unit--small;
 			}
 		}
 	}
@@ -108,15 +111,12 @@ $breakpoint--styleguide: tablet;
 	// grid
 
 	&-grid {
-		$spacing-unit--gutter: $spacing-unit;
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: n($spacing-unit--gutter);
 
 		&__item {
 			flex: none;
 			width: 100%;
-			padding-left: $spacing-unit--gutter;
 		}
 	}
 
@@ -155,5 +155,60 @@ $breakpoint--styleguide: tablet;
 
 	&-hr {
 		background-color: $c--subtle;
+	}
+
+	&-colours {
+		&__base {
+			width: 1/3 * 100%;
+		}
+
+		&__variants {
+			width: 2/3 * 100%;
+		}
+	}
+
+	&-colour {
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+
+		&__inner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 2/3 * 1em;
+			mix-blend-mode: color-burn;
+
+			> span {
+				display: block;
+			}
+
+			> code {
+				padding: 0;
+				font-size: inherit;
+				background-color: transparent;
+				color: inherit;
+			}
+		}
+
+		&-wrapper {
+			&--secondary {
+				width: 1/3 * 100%;
+			}
+
+			&--tertiary {
+				width: 1/6 * 100%;
+			}
+		}
 	}
 }
