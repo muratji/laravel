@@ -34,28 +34,10 @@
 				],
 			],
 		],
-		'Buttons - Vue' => [
-			'partial' => 'vue',
+		'Buttons' => [
+			'partial' => 'buttons',
 			'model' => [
 				'cta' => 'Laboris tempor laboris',
-				'types' => [
-					'Primary' => 'primary',
-					'Secondary' => 'secondary',
-					'Positive' => 'positive',
-					'Negative' => 'negative',
-				],
-			],
-		],
-		'Buttons - Blade' => [
-			'partial' => 'blade',
-			'model' => [
-				'cta' => 'Laboris tempor laboris',
-				'types' => [
-					'Primary' => 'primary',
-					'Secondary' => 'secondary',
-					'Positive' => 'positive',
-					'Negative' => 'negative',
-				],
 			],
 		],
 	],
