@@ -1,11 +1,26 @@
-@foreach ($buttons as $name => $props)
+@foreach ($types as $name => $type)
 	@component('styleguide.component', ['title' => $name])
-		@include('blocks.button', array_merge($props, ['size' => 'small']))
+		@include('blocks.button', [
+			'cta' => $cta,
+			'type' => $type,
+			'size' => 'small',
+		])
 
-		@include('blocks.button', $props)
+		@include('blocks.button', [
+			'cta' => $cta,
+			'type' => $type,
+		])
 
-		@include('blocks.button', array_merge($props, ['size' => 'large']))
+		@include('blocks.button', [
+			'cta' => $cta,
+			'type' => $type,
+			'size' => 'large',
+		])
 
-		@include('blocks.button', array_merge($props, ['disabled' => true]))
+		@include('blocks.button', [
+			'cta' => $cta,
+			'type' => $type,
+			'disabled' => true,
+		])
 	@endcomponent
 @endforeach

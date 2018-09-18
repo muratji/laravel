@@ -1,11 +1,11 @@
-@foreach ($buttons as $name => $props)
+@foreach ($types as $name => $type)
 	@component('styleguide.component', ['title' => $name])
-		<magic-button v-bind='@json($props)' size="small"></magic-button>
+		<magic-button cta="{{ $cta }}" type="{{ $type }}" size="small"></magic-button>
 
-		<magic-button v-bind='@json($props)'></magic-button>
+		<magic-button cta="{{ $cta }}" type="{{ $type }}"></magic-button>
 
-		<magic-button v-bind='@json($props)' size="large"></magic-button>
+		<magic-button cta="{{ $cta }}" type="{{ $type }}" size="large"></magic-button>
 
-		<magic-button v-bind='@json($props)' disabled></magic-button>
+		<magic-button cta="{{ $cta }}" type="{{ $type }}" disabled></magic-button>
 	@endcomponent
 @endforeach
