@@ -3,7 +3,7 @@
 		<h3 class="s-h3">{{ $title }}</h3>
 
 		@if ($meta ?? false)
-			<dl class="s-push-top">
+			<dl class="s-push-top--small s-meta">
 				@foreach ($meta as $key => $value)
 					<dt>{{ $key }}</dt>
 					<dd>
@@ -26,7 +26,9 @@
 		@endif
 	</div>
 
-	<div class="s-grid__item s-component__preview">
-		{{ $slot }}
+	<div class="s-grid__item s-component__preview-wrapper">
+		<div class="s-component__preview">
+			{{ $slot }}
+		</div>
 	</div>
 </div>

@@ -7,7 +7,11 @@
 // $spacing-unit--medium: rem(30px);
 // $spacing-unit--large: rem(40px);
 
-$c--border: $c--grey-light;
+$rel-spacing-unit: .5em;
+
+$c--subtle: $c--grey-light;
+
+$breakpoint--styleguide: tablet;
 
 .s {
 	// spacing
@@ -31,6 +35,7 @@ $c--border: $c--grey-light;
 			}
 		}
 	}
+	@include macro($spacing-unit--x-small, $spacing-unit--small, --small);
 	@include macro($spacing-unit--small, $spacing-unit);
 	@include macro($spacing-unit--medium, $spacing-unit--large, --large);
 
@@ -58,7 +63,46 @@ $c--border: $c--grey-light;
 	}
 
 	&-h3 {
-		@extend .h3;
+		@extend .h5;
+	}
+
+	&-meta {
+		> dt,
+		> dd {
+			margin-top: 0;
+		}
+
+		> dt {
+			font-weight: normal;
+			color: $c--subtle;
+		}
+
+		@include mq($breakpoint--styleguide) {
+			@include cf;
+
+			> dt,
+			> dd {
+				float: left;
+				margin-top: $rel-spacing-unit;
+			}
+
+			> dt {
+				clear: left;
+				width: 7em;
+
+				&:first-child {
+					&,
+					+ dd {
+						margin-top: 0;
+					}
+				}
+			}
+
+			> dd {
+				width: auto;
+				padding-left: $rel-spacing-unit;
+			}
+		}
 	}
 
 	// grid
@@ -82,17 +126,34 @@ $c--border: $c--grey-light;
 		$ratio--preview: 14/24;
 
 		&__meta {
-			width: (1 - $ratio--preview) * 100%;
+			display: none;
 		}
 
 		&__preview {
-			width: $ratio--preview * 100%;
+			padding: $spacing-unit--small;
+			border: 1px solid $c--subtle;
+			border-radius: 3px;
+		}
+
+		@include mq($breakpoint--styleguide) {
+			&__meta {
+				display: block;
+				width: (1 - $ratio--preview) * 100%;
+			}
+
+			&__preview {
+				min-height: 10em;
+
+				&-wrapper {
+					width: $ratio--preview * 100%;
+				}
+			}
 		}
 	}
 
 	// others
 
 	&-hr {
-		background-color: $c--border;
+		background-color: $c--subtle;
 	}
 }
