@@ -1,5 +1,11 @@
 @extends('layouts/app')
 
+@section('css')
+	@parent
+
+	<link rel="stylesheet" href="{{ mix('/assets/css/styleguide.css') }}">
+@endsection
+
 @section('content')
 	<div class="container">
 		<h1 class="h1">Styleguide</h1>
