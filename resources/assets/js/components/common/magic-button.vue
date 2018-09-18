@@ -1,17 +1,22 @@
 <template>
-	<button class="button" :class="[sizeClass, typeClass]" v-text="$props.cta" :disabled="$props.disabled" />
+	<button class="button"
+		:class="classes"
+		:disabled="$props.disabled"
+		v-text="$props.cta" />
 </template>
 
 <script>
 	const classes = {
-		type: {
+		sizes: {
+			small: 'button--small',
+			medium: null,
+			large: 'button--large',
+		},
+		types: {
+			primary: null,
 			secondary: 'button--secondary',
 			positive: 'button--positive',
 			negative: 'button--negative',
-		},
-		size: {
-			small: 'button--small',
-			large: 'button--large',
 		},
 	};
 
@@ -26,18 +31,22 @@
 			},
 			size: {
 				type: String,
+				default: 'medium',
+				validator: size => Object.keys(classes.sizes).includes(size),
 			},
 			type: {
 				type: String,
+				default: 'primary',
+				validator: type => Object.keys(classes.types).includes(type),
 			},
 		},
 
 		computed: {
-			sizeClass() {
-				return classes.size[this.$props.size];
-			},
-			typeClass() {
-				return classes.type[this.$props.type];
+			classes() {
+				return {
+					[classes.sizes[this.$props.size]]: this.$props.size,
+					[classes.types[this.$props.type]]: this.$props.type,
+				};
 			},
 		},
 	};

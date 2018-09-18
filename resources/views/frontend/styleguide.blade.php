@@ -81,7 +81,7 @@
 			'model' => [
 				'cta' => 'Laboris tempor laboris',
 				'types' => [
-					'Primary' => null,
+					'Primary' => 'primary',
 					'Secondary' => 'secondary',
 					'Positive' => 'positive',
 					'Negative' => 'negative',
@@ -93,7 +93,7 @@
 			'model' => [
 				'cta' => 'Laboris tempor laboris',
 				'types' => [
-					'Primary' => null,
+					'Primary' => 'primary',
 					'Secondary' => 'secondary',
 					'Positive' => 'positive',
 					'Negative' => 'negative',
