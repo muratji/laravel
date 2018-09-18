@@ -6,21 +6,7 @@
 			<dl class="s-push-top--small s-meta">
 				@foreach ($meta as $key => $value)
 					<dt>{{ $key }}</dt>
-					<dd>
-						@if (is_array($value))
-							@if ($value['url'] ?? false)
-								<a href="{{ $value['url'] }}">{{ $value['copy'] }}</a>
-							@else
-								<ul>
-									@foreach ($value as $item)
-										<li>{{ $item }}</li>
-									@endforeach
-								</ul>
-							@endif
-						@else
-							{{ $value }}
-						@endif
-					</dd>
+					<dd>{!! $value !!}</dd>
 				@endforeach
 			</dl>
 		@endif

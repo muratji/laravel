@@ -1,28 +1,25 @@
-@foreach ($featured as $name => $colour)
-	@component('styleguide.component', ['title' => $name])
+@foreach ($featured as $name => $colours)
+	@component('styleguide.component', [
+		'title' => $name,
+		'meta' => $colours,
+	])
 		<div class="s-grid">
 			<div class="s-grid__item s-colours__base">
-				<div class="s-colour" style="background-color: {{ $colour['hex'] }}">
-					<div class="s-colour__inner">
-						<span>Base</span>
-
-						<code>{{ $colour['hex'] }}</code>
-					</div>
+				<div class="s-colour" style="background-color: {{ current($colours) }}">
+					<div class="s-colour__inner">{{ key($colours) }}</div>
 				</div>
 			</div>
 
 			<div class="s-grid__item s-colours__variants">
 				<div class="s-grid">
-					@foreach ($colour['variants'] as $name => $hex)
-						<div class="s-grid__item s-colour-wrapper--secondary">
-							<div class="s-colour" style="background-color: {{ $hex }}">
-								<div class="s-colour__inner">
-									<span>{{ $name }}</span>
-
-									<code>{{ $hex }}</code>
+					@foreach ($colours as $name => $hex)
+						@if (!$loop->first)
+							<div class="s-grid__item s-colour-wrapper--secondary">
+								<div class="s-colour" style="background-color: {{ $hex }}">
+									<div class="s-colour__inner">{{ $name }}</div>
 								</div>
 							</div>
-						</div>
+						@endif
 					@endforeach
 				</div>
 			</div>
@@ -35,11 +32,7 @@
 		@foreach ($additional as $name => $hex)
 			<div class="s-grid__item s-colour-wrapper--tertiary">
 				<div class="s-colour" style="background-color: {{ $hex }}">
-					<div class="s-colour__inner">
-						<span>{{ $name }}</span>
-
-						<code>{{ $hex }}</code>
-					</div>
+					<div class="s-colour__inner">{{ $name }}</div>
 				</div>
 			</div>
 		@endforeach
