@@ -163,6 +163,7 @@ $stack--code: 'PT Mono', monospace;
 
 	&-colour {
 		position: relative;
+		border-radius: 3px;
 
 		&::before {
 			content: '';

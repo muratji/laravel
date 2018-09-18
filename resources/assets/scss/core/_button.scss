@@ -65,6 +65,7 @@ Other states:
 	font-size: $p;
 	font-weight: $w--normal;
 	text-decoration: none;
+	border-radius: 3px;
 	-webkit-tap-highlight-color: rgba($c--white, 0);
 
 	&:focus {

@@ -30,7 +30,7 @@
 				],
 				'additional' => [
 					'positive' => '#24b35d',
-					'negative' => '#f50023',
+					'negative' => '#d64223',
 				],
 			],
 		],
@@ -58,6 +58,10 @@
 					'phone',
 				],
 			],
+		],
+		'Forms' => [
+			'partial' => 'forms',
+			'model' => [],
 		],
 	],
 ])
