@@ -40,5 +40,24 @@
 				'cta' => 'Laboris tempor laboris',
 			],
 		],
+		'Icons' => [
+			'partial' => 'icons',
+			'model' => [
+				'ui' => [
+					'triangle-down',
+					'chevron-down',
+					'chevron-thin-down',
+					'triangle-left',
+					'chevron-left',
+					'chevron-thin-left',
+					'plus',
+					'minus',
+					'cross',
+					'link',
+					'mail',
+					'phone',
+				],
+			],
+		],
 	],
 ])
