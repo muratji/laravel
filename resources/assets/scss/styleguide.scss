@@ -12,7 +12,7 @@
 
 // $rel-spacing-unit--small: .5em;
 
-$c--subtle: $c--grey-light;
+$c--subtle: #ccc;
 
 $breakpoint--styleguide: tablet;
 
@@ -79,6 +79,7 @@ $stack--code: 'PT Mono', monospace;
 
 		> dt {
 			font-weight: normal;
+			font-style: italic;
 			color: $c--subtle;
 		}
 
@@ -117,12 +118,17 @@ $stack--code: 'PT Mono', monospace;
 	// grid
 
 	&-grid {
+		$spacing-unit--gutter: $spacing-unit--x-small;
 		display: flex;
 		flex-wrap: wrap;
+		margin-top: n($spacing-unit--gutter);
+		margin-left: n($spacing-unit--gutter);
 
 		&__item {
 			flex: none;
 			width: 100%;
+			padding-top: $spacing-unit--gutter;
+			padding-left: $spacing-unit--gutter;
 		}
 	}
 
@@ -163,7 +169,8 @@ $stack--code: 'PT Mono', monospace;
 
 	&-colour {
 		position: relative;
-		border-radius: 3px;
+		overflow: hidden;
+		border-radius: 2px;
 
 		&::before {
 			content: '';
@@ -173,16 +180,19 @@ $stack--code: 'PT Mono', monospace;
 
 		&__inner {
 			position: absolute;
-			top: 0;
-			left: 0;
+			bottom: 0;
+			right: 0;
 			width: 100%;
 			height: 100%;
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+			justify-content: flex-end;
+			align-items: flex-end;
+			padding: h($rel-spacing-unit--small) $rel-spacing-unit--small;
+			border: 1px solid;
 			font-family: $stack--code;
-			mix-blend-mode: color-burn;
+			font-size: 2/3 * 1em;
+			text-align: right;
+			opacity: 1/3 * 1;
 		}
 
 		&-wrapper {

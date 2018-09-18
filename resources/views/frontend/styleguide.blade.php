@@ -20,12 +20,12 @@
 						'secondary' => '#fe0',
 					],
 					'Greyscale' => [
-						'black' => '#1a1a1a',
-						'grey-dark' => '#444',
 						'grey' => '#888',
-						'grey-light' => '#ddd',
-						'grey-x-light' => '#fafafa',
 						'white' => '#fff',
+						'grey-x-light' => '#fafafa',
+						'grey-light' => '#ddd',
+						'grey-dark' => '#444',
+						'black' => '#1a1a1a',
 					],
 				],
 				'additional' => [

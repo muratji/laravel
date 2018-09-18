@@ -1,7 +1,7 @@
 @foreach ($featured as $name => $colours)
 	@component('styleguide.component', [
 		'title' => $name,
-		'meta' => $colours,
+		'meta' => array_flip($colours),
 	])
 		<div class="s-grid">
 			<div class="s-grid__item s-colours__base">
