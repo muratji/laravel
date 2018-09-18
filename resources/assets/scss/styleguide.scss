@@ -129,8 +129,6 @@ $stack--code: 'PT Mono', monospace;
 	// component
 
 	&-component {
-		$ratio--preview: 14/24;
-
 		&__meta {
 			display: none;
 		}
@@ -144,14 +142,14 @@ $stack--code: 'PT Mono', monospace;
 		@include mq($breakpoint--styleguide) {
 			&__meta {
 				display: block;
-				width: (1 - $ratio--preview) * 100%;
+				width: 10/24 * 100%;
 			}
 
 			&__preview {
 				min-height: 10em;
 
 				&-wrapper {
-					width: $ratio--preview * 100%;
+					width: 14/24 * 100%;
 				}
 			}
 		}
