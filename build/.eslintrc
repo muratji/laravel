@@ -1,0 +1,29 @@
+{
+	"extends": "airbnb-base",
+	"plugins": [
+		"vue"
+	],
+	"globals": {
+		"_": true,
+		"axios": true,
+		"document": true,
+		"trans": true,
+		"window": true
+	},
+	"rules": {
+		"import/no-extraneous-dependencies": "off",
+		"indent": [
+			"error",
+			"tab"
+		],
+		"no-console": [
+			"error",
+			{
+				"allow": [
+					"error"
+				]
+			}
+		],
+		"no-tabs": "off"
+	}
+}

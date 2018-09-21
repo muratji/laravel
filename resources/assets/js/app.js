@@ -10,7 +10,7 @@ import registerForm from './components/accounts/register-form.vue';
 
 Vue.filter('trans', (...args) => trans.get(...args));
 
-new Vue({
+window.app = new Vue({
 	el: '#app',
 
 	mounted: () => {
