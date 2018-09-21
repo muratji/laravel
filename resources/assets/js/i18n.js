@@ -1,14 +1,14 @@
-function requireAll(r) {
-	return r.keys().reduce(function (acc, filename) {
-		const key = filename
-			.replace(/^\.\//, '')
-			.replace(/\.php$/, '')
-			.replace(/\//g, '.');
+const contexts = require.context('../../lang/', true, /\.php$/);
 
-		acc[key] = r(filename);
+const messages = contexts.keys().reduce((acc, filename) => {
+	const key = filename
+		.replace(/^\.\//, '')
+		.replace(/\.php$/, '')
+		.replace(/\//g, '.');
 
-		return acc;
-	}, {});
-};
+	acc[key] = contexts(filename);
 
-module.exports = requireAll(require.context('../../lang/', true, /\.php$/));
+	return acc;
+}, {});
+
+export default messages;
