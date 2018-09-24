@@ -24,6 +24,8 @@
 				]
 			}
 		],
-		"no-tabs": "off"
+		"no-tabs": "off",
+		"one-var": "off",
+    	"padded-blocks": "off"
 	}
 }
