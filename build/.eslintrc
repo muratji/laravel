@@ -28,6 +28,6 @@
 		"no-tabs": "off",
 		"object-shorthand": "off",
 		"one-var": "off",
-    	"padded-blocks": "off"
+		"padded-blocks": "off"
 	}
 }
